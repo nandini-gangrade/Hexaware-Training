@@ -60,18 +60,18 @@ from datetime import datetime
 # Compile-time error (Syntax error)
 def math_divide(n1, n2):
     try:
-        result = n1 / n2
+        result = n1 / n2  # Attempt division
         return result
     except:
-        return "Oops. 🤭 An Error happened"
+        return "Oops. 🤭 An Error happened"  # Handle any exception with a generic message
 ```
 
 ```
 # Errors
-# 1. try
-# 2. except
-# 3. else
-# 4. finally 
+# 1. try: Attempts the code block that might raise an exception.
+# 2. except: Catches and handles exceptions raised in the try block.
+# 3. else: Executed if no exceptions occur in the preceding try block.
+# 4. finally: Optional block that is always executed, regardless of whether an exception occurred or not.
 ```
 
 ```python
@@ -79,25 +79,26 @@ def divide_eggs(n1, n2):
     try:
         # Business logic error
         if n1 < 0:
-            # raise - throwing error
+            # Raise error for negative number of eggs
             raise ValueError("Eggs cannot be negative 🤭")
         if n2 < 0:
+            # Raise error for negative number of people
             raise ValueError("People cannot be negative 🤭")
 
         # Code is shield 🛡️
-        result = n1 / n2
+        result = n1 / n2  # Attempt division
 
     # Specific message
     except ZeroDivisionError:
-        return "You cannot divide by zero! 💀"
+        return "You cannot divide by zero! 💀"  # Handle division by zero error
     except ValueError as e:
-        return f"Invalid number: {e}"
+        return f"Invalid number: {e}"  # Handle ValueError with specific message
     else:
         # When no error
-        print("Division was successful ✅")
+        print("Division was successful ✅")  # Print success message when no error occurs
     finally:
-        # No matter
-        print("Operation done 😊✌️")
+        # No matter what, always execute this block
+        print("Operation done 😊✌️")  # Print message indicating operation completion
 
     return result
 ```
@@ -117,17 +118,18 @@ Operation done 😊✌️
 def calculate_age():
     try:
         current_year = datetime.now().year
-        birth_year = input("Please provide your birth year: ")
+        birth_year = input("Please provide your birth year: ")  # Prompt user for birth year
 
-        age = current_year - int(birth_year)
-        print(f"Your age is {age}")
+        age = current_year - int(birth_year)  # Calculate age
+        print(f"Your age is {age}")  # Print user's age
     except ValueError as err:
-        print("Invalid number: ", err)
+        print("Invalid number: ", err)  # Handle ValueError by printing error message
 ```
 
 ### Output:
+(No specific output example provided as it depends on user input)
 
-## Task 2:  -ve value, future years (Logical Errors)
+## Task 2: -ve value, future years (Logical Errors)
 ```python
 def calculate_age():
     try:
@@ -135,28 +137,27 @@ def calculate_age():
         birth_year = int(input("Please provide your birth year: "))  # Runtime error
 
         if birth_year < 0:
-            # Handling logical error
+            # Handling logical error for negative birth year
             raise ValueError("Year cannot be negative")
         if birth_year > current_year:
-            raise ValueError("Your not flash to be from the future ⚡")
+            # Handling logical error for future birth year
+            raise ValueError("You're not flash to be from the future ⚡")
 
-        age = current_year - birth_year
-        print(f"Your age is {age}")
+        age = current_year - birth_year  # Calculate age
+        print(f"Your age is {age}")  # Print user's age
     except ValueError as err:
-        print("Invalid number: ", err)
+        print("Invalid number: ", err)  # Handle ValueError by printing error message
     except Exception as err:
-        print("This catch all!", err)
+        print("This catch all!", err)  # Catch any other exceptions and print error message
 ```
 
 ```python
 def main():
     # Runtime error
     print(divide_eggs(10, -5))
-    print(divide_eggs
-
-(-10, 5))
+    print(divide_eggs(-10, 5))
     print(divide_eggs(10, 5))
-    print(divide_eggs(10, 0))  # Execution stops
+    print(divide_eggs(10, 0))  # Execution stops due to division by zero
     print(divide_eggs(15, 3))
     print(datetime.now().weekday())
     print(datetime.now().day)
@@ -171,7 +172,7 @@ You cannot divide by zero! 💀
 Operation done 😊✌️
 ```
 
-### Every has same base class -> Exception
+### Every has the same base class -> Exception
 ```python
 class NegativeNumberError(Exception):
     def __init__(self, value):
@@ -190,16 +191,20 @@ def only_positive_num():
     try:
         x = -10
         if x < 0:
-            raise NegativeNumberError(x)
+            raise NegativeNumberError(x)  # Raise custom exception for negative number
     except NegativeNumberError as err:
-        print(err)
+        print(err)  # Print custom exception message
 
 
 if __name__ == "__main__":
-    only_positive_num()
+   
+
+ only_positive_num()  # Call function to demonstrate custom exception handling
 ```
 
 ### Output:
 ```
 -10 -> Negative numbers are not allowed
 ```
+
+In this way, each part of the code is explained with comments added directly within the code itself.
