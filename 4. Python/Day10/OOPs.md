@@ -75,9 +75,9 @@ print(amisha.name)  # Amisha
 print(amisha.display_balance())  # Your balance is: ₹50,000
 ```
 
-### Conclusion:
+> Object-Oriented Programming allows us to model real-world entities as objects with attributes and behaviors. Classes serve as blueprints for creating objects, and each object encapsulates its data and functionality. OOP promotes code reusability, modularity, and better organization of code.
 
-Object-Oriented Programming allows us to model real-world entities as objects with attributes and behaviors. Classes serve as blueprints for creating objects, and each object encapsulates its data and functionality. OOP promotes code reusability, modularity, and better organization of code.
+----------
 
 ### Syntax Explanation:
 
