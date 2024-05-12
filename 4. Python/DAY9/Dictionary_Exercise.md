@@ -52,3 +52,66 @@ print(top_rated_books)
 
 ## Conclusion
 Both approaches achieve the same result, extracting titles of highly rated books. While the for loop approach is more explicit and suitable for beginners, the list comprehension approach offers a more concise and pythonic solution, enhancing readability and reducing code length.
+
+<br>
+
+# DAY10 : Dict Exercise
+
+## Updating Employee Experiences and Determining Status
+
+```python
+employees = [
+    {"name": "Sneha", "experience": 2},
+    {"name": "Manju"},
+    {"name": "Sai Subash", "experience": 4},
+    {"name": "Manasa"},
+]
+```
+
+### Task 1: Update Employee Experiences
+```python
+for employee in employees:
+    employee["experience"] = employee.get("experience", 0) + 1
+
+print(employees)
+
+# Output:
+# [
+#     {"name": "Sneha", "experience": 3},
+#     {"name": "Manju", "experience": 1},
+#     {"name": "Sai Subash", "experience": 5},
+#     {"name": "Manasa", "experience": 1},
+# ]
+```
+In this task, we iterate through each employee in the `employees` list. For each employee, we use the `.get()` method to retrieve their current experience. If the experience is not present (`None`), we default it to 0. Then, we increment the experience by 1 and update the employee's dictionary with the new experience value. Finally, we print the modified `employees` list, showing the updated experience for each employee.
+
+### Task 2: Determine Employee Status
+```python
+for employee in employees:
+    employee["experience"] = employee.get("experience", 0) + 1
+
+    if employee["experience"] >= 5:
+        employee["status"] = "Senior"
+    elif 3 <= employee["experience"] < 5:
+        employee["status"] = "Mid-Level"
+    else:
+        employee["status"] = "Junior"
+
+print(employees)
+
+# Output:
+# [
+#     {"name": "Sneha", "experience": 3, "status": "Mid-Level"},
+#     {"name": "Manju", "experience": 1, "status": "Junior"},
+#     {"name": "Sai Subash", "experience": 5, "status": "Senior"},
+#     {"name": "Manasa", "experience": 1, "status": "Junior"},
+# ]
+
+```
+Here, we again iterate through each employee in the `employees` list. Similar to Task 1, we update each employee's experience by 1. After that, we use conditional statements to determine the status of each employee based on their experience level:
+- If an employee has 5 or more years of experience, they are labeled as "Senior".
+- If an employee has between 3 and 5 years of experience, they are labeled as "Mid-Level".
+- Otherwise, if an employee has less than 3 years of experience, they are labeled as "Junior".
+We update the `status` key in each employee's dictionary accordingly. Finally, we print the modified `employees` list, which now includes the status of each employee.
+
+> These tasks demonstrate how to update and manipulate dictionaries within a list comprehensively, ensuring that each employee's information is correctly updated and labeled according to their experience level.
