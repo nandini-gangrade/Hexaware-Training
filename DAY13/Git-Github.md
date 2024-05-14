@@ -126,4 +126,17 @@ Overall, Git provides a robust and flexible platform for managing version contro
 6. **Good Messages:**
    - Write clear, descriptive commit messages that explain the purpose and context of each change. A good commit message provides valuable information to future maintainers and reviewers, helping them understand why the change was made and how it affects the codebase.
 
+Certainly! Here's a table summarizing the six principles of committing changes to a version control system, along with their usage:
+
+| Principle           | Description                                     | Usage                                                |
+|---------------------|-------------------------------------------------|------------------------------------------------------|
+| Logical Commit      | Make each commit a logical unit of change       | ✓ Focus on a single improvement or fix               |
+| Small Commit        | Break down changes into small, manageable chunks| ✓ Commit incrementally for each meaningful change   |
+| Multiple Commits    | Commit each change separately for clarity       | ✓ Separate commits for different features or fixes   |
+| Save Point          | Commit early and commit often                   | ✓ Regularly capture progress as "save points"        |
+| Always Commit When Code Works | Commit functional and tested changes| ✓ Commit when your code is stable and tested           |
+| Good Messages       | Write clear, descriptive commit messages        | ✓ Explain the purpose and context of each change     |
+
+By adhering to these principles, you can maintain a clean, organized version history, facilitate collaboration within your team, and ensure the stability and reliability of your codebase.
+
 Following these principles when committing changes to your version control system promotes clarity, consistency, and collaboration within your development team, ultimately leading to a more efficient and reliable software development process.
