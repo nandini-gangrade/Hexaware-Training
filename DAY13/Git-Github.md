@@ -105,3 +105,25 @@ Git works by tracking changes to files within a project, managing these changes 
    - Git ensures data integrity by using cryptographic hashes to uniquely identify each commit and file within the repository. This guards against corruption or tampering of repository contents.
 
 Overall, Git provides a robust and flexible platform for managing version control, enabling developers to track changes, collaborate effectively, and maintain the integrity of their projects over time.
+
+## Six key principles to remember when committing changes
+
+1. **Logical Commit:**
+   - Make each commit a logical unit of change that represents a single, focused improvement or fix. Avoid bundling unrelated changes together in a single commit, as it makes it harder to understand the purpose and impact of each commit.
+
+2. **Small Commit:**
+   - Break down your changes into small, manageable chunks and commit them incrementally. Small commits make it easier to review, revert, and integrate changes, leading to a more efficient and reliable development process.
+
+3. **Multiple Commits:**
+   - If you're working on multiple features or fixes simultaneously, commit each change separately. This allows you to maintain a clear and granular version history, making it easier to track the progress of individual tasks and collaborate with others.
+
+4. **Save Point:**
+   - Commit early and commit often. Treat each commit as a "save point" for your work, capturing your progress at regular intervals. This minimizes the risk of losing changes and provides a safety net in case something goes wrong.
+
+5. **Always Commit When Code Works:**
+   - Commit your changes as soon as they are functional and tested. Waiting too long to commit increases the chances of introducing errors or losing track of changes. By committing when your code works, you ensure that your commits represent stable, reliable snapshots of your project.
+
+6. **Good Messages:**
+   - Write clear, descriptive commit messages that explain the purpose and context of each change. A good commit message provides valuable information to future maintainers and reviewers, helping them understand why the change was made and how it affects the codebase.
+
+Following these principles when committing changes to your version control system promotes clarity, consistency, and collaboration within your development team, ultimately leading to a more efficient and reliable software development process.
