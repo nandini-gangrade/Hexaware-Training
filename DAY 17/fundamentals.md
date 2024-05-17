@@ -599,3 +599,116 @@ Understanding type coercion is important for avoiding unexpected results in your
 - Remember that JavaScript tries to be flexible with types, but this can sometimes lead to unintended consequences.
 
 By understanding and using type coercion properly, you can write more predictable and bug-free JavaScript code.
+
+----
+
+Conditionals in JavaScript allow you to execute different blocks of code based on certain conditions. Here, we'll cover the main types of conditional statements in JavaScript: `if`, `else if`, `else`, `switch`, and the ternary operator.
+
+### 1. `if` Statement
+
+The `if` statement is used to execute a block of code if a specified condition is true.
+
+```javascript
+let age = 20;
+
+if (age >= 18) {
+  console.log("You are an adult.");
+}
+```
+
+### 2. `else if` Statement
+
+The `else if` statement is used to specify a new condition to test if the first condition is false.
+
+```javascript
+let age = 15;
+
+if (age >= 18) {
+  console.log("You are an adult.");
+} else if (age >= 13) {
+  console.log("You are a teenager.");
+}
+```
+
+### 3. `else` Statement
+
+The `else` statement is used to execute a block of code if none of the previous conditions are true.
+
+```javascript
+let age = 10;
+
+if (age >= 18) {
+  console.log("You are an adult.");
+} else if (age >= 13) {
+  console.log("You are a teenager.");
+} else {
+  console.log("You are a child.");
+}
+```
+
+### 4. `switch` Statement
+
+The `switch` statement is used to perform different actions based on different conditions. It's a cleaner way to compare a value against multiple possible matches.
+
+```javascript
+let day = 3;
+let dayName;
+
+switch (day) {
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  case 7:
+    dayName = "Sunday";
+    break;
+  default:
+    dayName = "Invalid day";
+}
+
+console.log(dayName); // Output: Wednesday
+```
+
+### 5. Ternary Operator
+
+The ternary operator is a shorthand way to write an `if-else` statement. It's useful for simple conditional expressions.
+
+```javascript
+let age = 20;
+let status = (age >= 18) ? "adult" : "minor";
+
+console.log(status); // Output: adult
+```
+
+### Summary Table
+
+| Statement       | Description                                            | Syntax                                                      | Example |
+|-----------------|--------------------------------------------------------|-------------------------------------------------------------|---------|
+| `if`            | Executes a block of code if the condition is true.     | `if (condition) { // code }`                                | `if (age >= 18) { // code }` |
+| `else if`       | Specifies a new condition if the first is false.       | `else if (condition) { // code }`                           | `else if (age >= 13) { // code }` |
+| `else`          | Executes a block of code if no previous condition is true. | `else { // code }`                                          | `else { // code }` |
+| `switch`        | Performs different actions based on different conditions. | `switch (expression) { case value: // code break; ... }`    | `switch (day) { case 1: // code break; ... }` |
+| Ternary Operator| Shorthand for `if-else` statement.                     | `condition ? expr1 : expr2`                                 | `age >= 18 ? "adult" : "minor"` |
+
+### Practical Tips
+
+- Use `if-else` for checking a few conditions.
+- Use `switch` when you have many possible conditions for a single expression.
+- Use the ternary operator for simple conditional assignments.
+- Always include a `break` statement in each `case` of a `switch` to prevent fall-through.
+
+By understanding and using these conditional statements, you can control the flow of your JavaScript programs more effectively.
