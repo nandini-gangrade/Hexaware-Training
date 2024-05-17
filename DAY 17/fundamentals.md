@@ -179,6 +179,8 @@ Type coercion is the automatic or implicit conversion of values from one data ty
 
 This `.md` file provides an organized overview of JavaScript basics with explanations, syntax, and examples under appropriate categories.
 
+-----
+
 # ES6 Features
 
 ES6, also known as ECMAScript 2015, introduced several new features to JavaScript, making it more powerful and easier to work with. Below is a table summarizing these features with examples and explanations.
@@ -422,8 +424,178 @@ console.log(own_max(5, 6, 10));              // Output: [5, 6, 10]
 console.log(own_max(5, 6, 10, 7, 80, 60));   // Output: [5, 6, 10, 7, 80, 60]
 ```
 
-In this example, `own_max()` function uses the rest parameter (...) to collect all arguments into the `nums` array, allowing it to accept any number of arguments and return them as an array.
 
+----
 
+# JavaScript Loops
 
+In JavaScript, loops are used to execute a block of code repeatedly until a specified condition is met. Here, we'll discuss the different types of loops and provide examples of each.
 
+## Types of Loops
+
+| Loop Type      | Description                                                                                        | Syntax                                                     | Use Case |
+|----------------|----------------------------------------------------------------------------------------------------|------------------------------------------------------------|----------|
+| `for` Loop     | Runs a block of code a certain number of times.                                                    | `for (initialization; condition; increment/decrement) { ... }` | When the number of iterations is known beforehand. |
+| `while` Loop   | Executes a block of code as long as a specified condition is true.                                 | `while (condition) { ... }`                                | When the number of iterations is not known beforehand. |
+| `do...while` Loop | Similar to a while loop, but executes the block of code once before checking the condition.     | `do { ... } while (condition);`                            | When you need to ensure the code runs at least once. |
+| `for...in` Loop| Iterates over the properties of an object or the indices of an array.                               | `for (variable in object/array) { ... }`                   | When you want to loop through an object's properties or array indices. |
+| `for...of` Loop| Iterates over the values of an iterable object (like arrays or strings).                           | `for (variable of iterable) { ... }`                       | When you want to loop through an iterable's values. |
+
+## Examples of Loops
+
+### 1. `for` Loop
+
+```javascript
+console.log("Normal for loop");
+const marks = [40, 50, 60, 70, 40];
+for (let i = 0; i < marks.length; i++) {
+  console.log(marks[i]);
+}
+```
+
+### 2. `for...in` Loop
+
+```javascript
+console.log("for...in");
+for (let idx in marks) {
+  console.log(marks[idx]);
+}
+```
+
+The `for...in` loop is useful for iterating over the properties of an object or the indices of an array.
+
+```javascript
+const avenger = {
+  name: "Tony Stark",
+  house: "🏘️",
+  networth: "💰💰💰",
+  power: "🤖",
+  phrase: "❤️ you 3000",
+};
+
+console.log("for...in with object");
+for (let key in avenger) {
+  console.log(key, avenger[key]);
+}
+
+console.log(Object.keys(avenger)); // ['name', 'house', 'networth', 'power', 'phrase']
+console.log(Object.values(avenger)); // ['Tony Stark', '🏘️', '💰💰💰', '🤖', '❤️ you 3000']
+```
+
+### 3. `for...of` Loop
+
+```javascript
+console.log("for...of");
+for (let mark of marks) {
+  console.log(mark);
+}
+```
+
+The `for...of` loop is useful for iterating over the values of an iterable object like arrays or strings.
+
+### Merging Objects Using the Spread Operator
+
+You can merge objects using the spread operator (`...`). This is useful when you want to combine properties from multiple objects.
+
+```javascript
+const details = {
+  age: 40,
+  power: "💿",
+};
+
+// Merging objects
+console.log({ ...avenger, ...details }); // { name: 'Tony Stark', house: '🏘️', networth: '💰💰💰', power: '💿', phrase: '❤️ you 3000', age: 40 }
+console.log({ ...details, ...avenger }); // { age: 40, power: '🤖', name: 'Tony Stark', house: '🏘️', networth: '💰💰💰', phrase: '❤️ you 3000' }
+```
+
+In the first `console.log`, the `avenger` object is merged with the `details` object, and the `power` property from `details` overrides the one from `avenger`. In the second `console.log`, the order is reversed, so the `power` property from `avenger` overrides the one from `details`.
+
+Using these examples, you can understand how different loops work in JavaScript and how to use the spread operator for merging objects.
+
+----
+
+# JavaScript Type Casting / Coercion
+
+Type casting (or type coercion) in JavaScript is the process of converting one data type to another. JavaScript performs type coercion automatically in some cases, especially when using operators with mixed data types.
+
+## Examples of Type Casting
+
+### Example 1: Automatic Type Coercion with `+` (Concatenation)
+
+When you use the `+` operator with a number and a string, JavaScript converts the number to a string and concatenates them.
+
+```javascript
+var x1 = 3;
+var x2 = "5";
+console.log(x1 + x2); // Output: '35'
+```
+
+In this example, `x1` (which is a number) is coerced into a string, and then concatenated with `x2`, resulting in the string `'35'`.
+
+### Example 2: Automatic Type Coercion with `-` (Subtraction)
+
+When you use the `-` operator with a number and a string, JavaScript tries to convert the string to a number and then performs the subtraction.
+
+```javascript
+console.log(x1 - x2); // Output: -2
+```
+
+In this example, `x2` (which is a string) is coerced into a number, and then subtracted from `x1`, resulting in the number `-2`.
+
+## Explicit Type Casting
+
+You can also explicitly convert data types in JavaScript using functions like `Number()`, `String()`, `Boolean()`, `parseInt()`, and `parseFloat()`.
+
+### Example 3: Explicit Type Conversion Using `Number()` and `String()`
+
+```javascript
+var x1 = 3;
+var x2 = "5";
+
+var x2AsNumber = Number(x2);
+console.log(x1 + x2AsNumber); // Output: 8
+
+var x1AsString = String(x1);
+console.log(x1AsString + x2); // Output: '35'
+```
+
+In this example, `Number(x2)` explicitly converts `x2` from a string to a number, allowing for numerical addition. Similarly, `String(x1)` converts `x1` from a number to a string for concatenation.
+
+### Example 4: Explicit Type Conversion Using `parseInt()` and `parseFloat()`
+
+`parseInt()` and `parseFloat()` are used to convert strings to integers and floating-point numbers, respectively.
+
+```javascript
+var x3 = "10.5";
+var x4 = "20px"; // `parseInt` will stop at the first non-digit character
+
+var intResult = parseInt(x3); // Converts to integer, ignoring the decimal part
+console.log(intResult); // Output: 10
+
+var floatResult = parseFloat(x3); // Converts to floating-point number
+console.log(floatResult); // Output: 10.5
+
+var intFromString = parseInt(x4); // Stops at the first non-digit character
+console.log(intFromString); // Output: 20
+```
+
+In this example:
+- `parseInt(x3)` converts the string `"10.5"` to the integer `10`.
+- `parseFloat(x3)` converts the string `"10.5"` to the floating-point number `10.5`.
+- `parseInt(x4)` converts the string `"20px"` to the integer `20`, stopping at the first non-digit character.
+
+## Summary of Type Coercion Rules
+
+- **`+` Operator (Concatenation)**: If either operand is a string, the other operand is converted to a string, and the result is their concatenation.
+- **Arithmetic Operators (`-`, `*`, `/`, `%`)**: If either operand is a string that can be converted to a number, JavaScript will convert it to a number and perform the operation.
+- **`parseInt()` and `parseFloat()`**: Use these functions to explicitly convert strings to integers and floating-point numbers, respectively.
+
+## Practical Use Cases
+
+Understanding type coercion is important for avoiding unexpected results in your code. Here are a few practical tips:
+
+- Always be mindful of the data types you are working with.
+- Use explicit type conversion when necessary to ensure your code behaves as expected.
+- Remember that JavaScript tries to be flexible with types, but this can sometimes lead to unintended consequences.
+
+By understanding and using type coercion properly, you can write more predictable and bug-free JavaScript code.
