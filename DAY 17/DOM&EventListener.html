@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation and Event Listeners</title>
+    <style>
+        h1 {
+            color: crimson;
+        }
+        .title {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the app</h1>
+    <h2 id="sub-heading">Welcome to the app</h2>
+    <h3 class="title">Welcome to the app 1</h3>
+    <h4 class="title">Welcome to the app 2</h4>
+    <h5 class="title">Welcome to the app 3</h5>
+    <h6>Welcome to the app</h6>
+    
+    <button id="change-text">Change Text</button>
+    
+    <script>
+        var h2 = document.getElementById("sub-heading");
+        console.log(h2.innerText);
+        h2.innerText = "This is super cool"; // update your HTML
+        
+        var titles = document.getElementsByClassName("title");
+        console.log(titles);
+        
+        for (let title of titles) {
+            console.log(title.innerText);
+        }
+
+        document.getElementById('change-text').addEventListener('click', function() {
+            h2.innerText = "Text has been changed!";
+            console.log("Button clicked to change text");
+        });
+    </script>
+</body>
+</html>
