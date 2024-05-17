@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Test Checker</title>
+</head>
+<body>
+    <h1>Welcome to the app</h1>
+    <br />
+    <br />
+    <h3>Check for driving test</h3>
+    <input type="text" id="ageInput" placeholder="Enter your age" />
+    <button id="checkButton">Check</button>
+    <p id="result"></p>
+    
+    <script>
+        // JavaScript to handle the button click and age check
+        document.getElementById("checkButton").addEventListener("click", function() {
+            // Get the value of the input field
+            var age = document.getElementById("ageInput").value;
+            var result = document.getElementById("result");
+
+            // Check if the age is a number
+            if (isNaN(age)) {
+                result.innerText = "Please enter a valid number.";
+                return;
+            }
+
+            // Convert the input to a number
+            age = Number(age);
+
+            // Check the age and display the appropriate message
+            if (age >= 18) {
+                result.innerText = "You are eligible for the driving test.";
+            } else {
+                result.innerText = "You are not eligible for the driving test.";
+            }
+        });
+    </script>
+</body>
+</html>
