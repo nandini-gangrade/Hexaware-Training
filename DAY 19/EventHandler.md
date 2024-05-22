@@ -13,3 +13,34 @@
 | onblur          | Triggered when an element loses focus.         | `<element onblur="functionName()">`    | `<input type="text" onblur="validateInput()">`     | This event handler executes a function when the element loses focus. It's often used for validation or cleanup tasks after user interaction.                                 |
 
 These event handlers can be attached directly to HTML elements as attributes (`on[event]`) or added dynamically using JavaScript (`element.addEventListener()`). They provide a way to respond to user interactions and other events occurring within a webpage.
+
+## `alert`, `confirm`, and `prompt` methods in JavaScript:
+
+| Method   | Purpose                                      | User Interaction | Returns      |
+|----------|----------------------------------------------|------------------|--------------|
+| `alert`  | Displays a message to the user.              | None             | Undefined    |
+| `confirm`| Presents a dialog box with OK and Cancel buttons. | OK or Cancel buttons | Boolean (true if OK, false if Cancel) |
+| `prompt` | Prompts the user to enter input via a text box. | Text input field | String (user input) or null if cancelled |
+
+### Detailed Explanation:
+
+1. **`alert`**:
+   - **Purpose**: Used to display a message to the user, providing information or notifying about something.
+   - **User Interaction**: No user interaction is required; it simply displays a message with an OK button.
+   - **Returns**: `undefined`.
+
+2. **`confirm`**:
+   - **Purpose**: Presents a dialog box with OK and Cancel buttons, typically used for confirming an action or decision.
+   - **User Interaction**: The user can click either the OK or Cancel button.
+   - **Returns**: 
+     - `true` if the user clicks OK.
+     - `false` if the user clicks Cancel.
+
+3. **`prompt`**:
+   - **Purpose**: Prompts the user to enter input via a text box, typically used to request user input or gather information.
+   - **User Interaction**: The user can enter text into a text input field provided by the prompt dialog box and then click OK or Cancel.
+   - **Returns**: 
+     - A string containing the text entered by the user if the user clicks OK.
+     - `null` if the user clicks Cancel or closes the prompt dialog box without entering any text.
+
+These methods are often used in web development to interact with users and gather input or provide information in a user-friendly manner.
