@@ -22,7 +22,7 @@
 | 16 | 2024-05-17    | [Abstract Classes & Methods](https://github.com/nandini-gangrade/Hexaware-Training/blob/python/4.%20Python/DAY%2016/Abstract.md), [File Handling](https://github.com/nandini-gangrade/Hexaware-Training/blob/python/4.%20Python/DAY%2016/FileHandling.md), [Testing](https://github.com/nandini-gangrade/Hexaware-Training/blob/python/4.%20Python/DAY%2016/Testing.md), [JS](https://github.com/nandini-gangrade/Hexaware-Training/tree/javascript/DAY%2017)  
 | 17 | 2024-05-20    | [Project Discussion](https://github.com/nandini-gangrade/VIRTUAL_ART_GALLERY), [Assignment Submission](https://github.com/nandini-gangrade/Courier_Management_System)
 | 18 | 2024-05-21    | [Holiday]()  
-| 19 | 2024-04-23    | [JS Exercise Continue](https://github.com/nandini-gangrade/Hexaware-Training/tree/agile/2.%20Agile)  
+| 19 | 2024-04-23    | [JS Exercise Continue](https://github.com/nandini-gangrade/Hexaware-Training/tree/javascript/DAY%2017), [Cloud](https://github.com/nandini-gangrade/Hexaware-Training/tree/cloud)  
 
 
 <br>
