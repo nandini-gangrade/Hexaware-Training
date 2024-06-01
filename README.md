@@ -1,4 +1,4 @@
-# Hexaware-Python-Training
+# Training
 
 ## DAILY PROGRESS
 
