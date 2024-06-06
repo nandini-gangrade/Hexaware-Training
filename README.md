@@ -1,6 +1,6 @@
 # Training
 
-### Pdf - [Links for better access]()
+### Pdf - [Links for better access](https://github.com/nandini-gangrade/Training/blob/main/Notes.pdf)
 
 ## DAILY PROGRESS
 
