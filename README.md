@@ -1,5 +1,7 @@
 # Training
 
+### Pdf - [Links for better access]()
+
 ## DAILY PROGRESS
 
 | DAY       | DATE(YMD)      | LINKS                                                                                  |
